@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="31" android:compileSdkVersionCodename="12" android:versionCode="15" android:versionName="1.2.15" package="eu.kanade.tachiyomi.extension.id.manhwaid" platformBuildVersionCode="31" platformBuildVersionName="12">
+
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="31" />
+
+	<uses-feature android:name="tachiyomi.extension" />
+
+	<application android:allowBackup="false" android:icon="@mipmap/ic_launcher" android:label="Tachiyomi: ManhwaID">
+
+		<activity android:excludeFromRecents="true" android:exported="true" android:name="eu.kanade.tachiyomi.multisrc.madara.MadaraUrlActivity" android:theme="@android:style/Theme.NoDisplay">
+
+			<intent-filter>
+
+				<action android:name="android.intent.action.VIEW" />
+
+				<category android:name="android.intent.category.DEFAULT" />
+
+				<category android:name="android.intent.category.BROWSABLE" />
+
+				<data android:host="manhwaid.org" android:pathPattern="/.*/..*" android:scheme="https" />
+
+			</intent-filter>
+
+		</activity>
+
+		<meta-data android:name="tachiyomi.extension.class" android:value=".ManhwaID" />
+
+		<meta-data android:name="tachiyomi.extension.factory" android:value="madara" />
+
+		<meta-data android:name="tachiyomi.extension.nsfw" android:value="1" />
+
+		<meta-data android:name="tachiyomi.extension.hasReadme" android:value="0" />
+
+		<meta-data android:name="tachiyomi.extension.hasChangelog" android:value="0" />
+
+	</application>
+
+</manifest>
